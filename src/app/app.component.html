@@ -1,8 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="padding: 3%;">
-  <h1>
+  <h1>StashAway Design Challenge (Internal Tools)</h1>
+  <h2>
     Modified Tesseract.js Angular App
-  </h1>
+  </h2>
   <h5>Tesseract library is a powerful Javascript library that is able to help extract text from images. However when
     images are in different orientation, the text recognised are not accurate.
   </h5>
@@ -12,10 +13,13 @@
     So based on a set confidence threshold, if the conversion does not meet this number, the image will be rotated.
   </h5>
 
-  <h5>For this test app, I used a confidence threshold level of 80 % and rotate image by 90 degrees.</h5>
+  <h5>For this test app, I used a confidence threshold level of 80 % and rotate image by 90 degrees if this threshold is
+    not met.</h5>
 
   <h6><i>This app works on the assumption that the image background is not noisy and beside text, there are no other
       elements in the image.</i></h6>
+
+  <h6>- Aw Xin Yi</h6>
 </div>
 
 <div style="padding: 3%;">
@@ -32,12 +36,14 @@
 
     <div>
       <img [src]="imgSrc" id="img" width="80%" height="30%" />
-      <p>Confidence: {{confidence}} %</p>
+      <div *ngIf="ocrResult">
+        <h2>Result: </h2>
+        <p>
+          {{ ocrResult }}
+        </p>
+        <p>Confidence: {{confidence}} %</p>
+      </div>
 
-      <h2>Result: </h2>
-      <p>
-        {{ ocrResult }}
-      </p>
     </div>
   </div>
 

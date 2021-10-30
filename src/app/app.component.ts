@@ -11,7 +11,7 @@ export class AppComponent {
   ocrResult = 'Recognizing...';
   imageUpload: any;
   imgSrc: any;
-  confidence: any;
+  confidence: any = '....';
 
   stopProcess: boolean = false;
 
