@@ -15,10 +15,12 @@
     "@angular/common": "~8.0.3",
     "@angular/compiler": "~8.0.3",
     "@angular/core": "~8.0.3",
+    "@angular/fire": "^5.4.2",
     "@angular/forms": "~8.0.3",
     "@angular/platform-browser": "~8.0.3",
     "@angular/platform-browser-dynamic": "~8.0.3",
     "@angular/router": "~8.0.3",
+    "firebase": ">= 5.5.7 <8",
     "rxjs": "~6.4.0",
     "tesseract.js": "^2.0.0-beta.1",
     "tslib": "^1.9.0",
@@ -26,7 +28,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.800.6",
-    "@angular/cli": "~8.0.6",
+    "@angular/cli": "~8.3.0",
     "@angular/compiler-cli": "~8.0.3",
     "@angular/language-service": "~8.0.3",
     "@types/jasmine": "~3.3.8",
@@ -43,6 +45,11 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.4.3"
+    "typescript": "~3.4.3",
+    "@angular-devkit/architect": "<0.900 || ^0.900.0-0 || ^9.0.0-0",
+    "firebase-tools": "^7.12.0",
+    "fuzzy": "^0.1.3",
+    "inquirer": "^6.2.2",
+    "inquirer-autocomplete-prompt": "^1.0.1"
   }
 }

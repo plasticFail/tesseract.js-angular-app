@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tesseractest": {
+      "hosting": {
+        "tesseract-angular-app": [
+          "tesseractest"
+        ]
+      }
+    }
+  }
+}

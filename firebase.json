@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "tesseract-angular-app",
+      "public": "dist/tesseract-angular-app",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
