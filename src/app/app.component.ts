@@ -13,9 +13,12 @@ export class AppComponent {
   imgSrc: any;
   confidence: any;
 
+  stopProcess: boolean = false;
+
   constructor(private renderer: Renderer2) {
 
   }
+
   async doOCR() {
 
     const worker = createWorker({
@@ -33,11 +36,19 @@ export class AppComponent {
     console.log(this.ocrResult)
     await worker.terminate();
 
-    //if confidence < 80m, flip image
-    if (confidence < 80) {
+    //if confidence < 80%, flip image
+    if (confidence <= 80 && !this.stopProcess) {
       this.rotateImage();
     }
 
+  }
+
+  stop() {
+    this.stopProcess = true;
+  }
+
+  reset() {
+    this.stopProcess = false;
   }
 
   rotateImage() {
@@ -73,4 +84,5 @@ export class AppComponent {
 
     this.doOCR()
   }
+
 }
