@@ -1,11 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Modified Tesseract.js Angular App
   </h1>
-  <img src="https://tesseract.projectnaptha.com/img/eng_bw.png" width="50%" />
-  <h2>Result: </h2>
-  <p>
-    {{ ocrResult }}
-  </p>
+</div>
+
+<div style="text-align: center;">
+  <label for="img">Select image: </label>
+  <input type="file" name="img" accept="image/*" [(ngModel)]="imageUpload" (change)="readImage($event)">
+
+  <div *ngIf="imageUpload">
+    <h2>Uploaded Image: </h2>
+    <img [src]="imgSrc" id="img" />
+    <p>Confidence: {{confidence}} %</p>
+
+    <h2>Result: </h2>
+    <p>
+      {{ ocrResult }}
+    </p>
+  </div>
+
 </div>
