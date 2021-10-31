@@ -5,7 +5,7 @@
     Modified Tesseract.js Angular App
   </h2>
   <h5>Tesseract library is a powerful Javascript library that is able to help extract text from images. However when
-    images are in different orientation, the text recognised are not accurate.
+    images are in different orientation, the texts recognised are not accurate.
   </h5>
 
   <h5>For this minor problem, the confidence level can be used. Confidence level is a 0–100 score of how accurate the
@@ -15,8 +15,13 @@
 
   <h5>For this test app, I used a confidence threshold level of 80 % and rotate image by 90 degrees if this threshold is
     not met.</h5>
+  <h5>Original Repo: <a target="_blank" href="https://github.com/jeromewu/tesseract.js-angular-app">Click Here</a> </h5>
+  <h5 style="color: red;">* There is some time lag between the image and the result displayed so please wait a few
+    seconds to get the final results.</h5>
+  <h5 style="color: red;">* Please refresh the page after image upload to restart the process.</h5>
 
-  <h6><i>This app works on the assumption that the image background is not noisy and beside text, there are no other
+  <h6><i>This app works on the assumption that the image background is not noisy, possible orientations of the image are
+      either vertical or horizontal, identified text is in english and besides text, there are no other
       elements in the image.</i></h6>
 
   <h6>- Aw Xin Yi</h6>
@@ -35,7 +40,8 @@
     <h2>Uploaded Image: </h2>
 
     <div>
-      <img [src]="imgSrc" id="img" width="80%" height="30%" />
+      <img [src]="imgSrc" id="img" width="60%" style="max-width: min-content; max-height: min-content;"
+        height="400px" />
       <div *ngIf="ocrResult">
         <h2>Result: </h2>
         <p>
